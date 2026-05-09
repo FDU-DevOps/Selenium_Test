@@ -3,14 +3,14 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 import pandas as pd
-df = pd.read_csv(r"C:\Users\antma\Documents\Test_Case_Sheet.csv")
+df = pd.read_csv(r"C:\Users\###\Test_Case_Sheet.csv")  # Location of the Test Case Sheet
 for i in range(0, len(df)):
  Column_value = df.loc[i , 'Columns'] + 2
  Row_value = df.at[i, 'Rows'] + 1
  urls = [
     'http://localhost:8090/battleship/'
  ]
- s = Service(r"C:\Users\antma\Downloads\chromedriver-win32\chromedriver.exe")
+ s = Service(r"C:\Users\####\chromedriver.exe") # Location of the Chrome Driver
  for url in urls:
     driver = webdriver.Chrome(service=s)
     driver.get(url)
@@ -86,5 +86,5 @@ for i in range(0, len(df)):
  print(df)
  driver.quit()
 print(df)
-df.to_csv(r"C:\Users\antma\Documents\Test_Case_Sheet.csv", index=False)
+df.to_csv(r"C:\Users\####\Test_Case_Sheet.csv", index=False) # Location of the Test Case Sheet
 print("Test over ")
