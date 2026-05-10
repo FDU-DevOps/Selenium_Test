@@ -10,4 +10,6 @@ Edit Chromedriver and .csv file locations in code
 
 Download latest version of selenium for intellij
 
+Run Jar file
+
 Run script
